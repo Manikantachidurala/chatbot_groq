@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: rgb(3, 0, 31);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+}
+
+.sideBar {
+  flex: 3;
+  border-right: 1px solid rgb(100, 100, 100);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #1E1B47;
+}
+
+.main {
+  flex: 9;
+  padding: 2rem;
+}
+
+.logo {
+  margin-right: 1rem;
+  height: 3rem;
+}
+
+.brand {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.upperSide {
+  padding: 2.5rem;
+}
+
+.upperSideTop {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  
+}
+
+.midBtn {
+  background-color: #5A4BFF;
+  border: none;
+  color: white;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-bottom: 3rem; /* Added margin to create space below */
+}
+
+
+
+.midBtn:hover {
+  background-color: #4B3FCC;
+}
+
+.btnIcon {
+  height: 2rem;
+}
+
+.upperSideBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Adds spacing between the query buttons */
+}
+.query {
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: background 0.3s;
+}
+
+.query:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+}
+
+.icon {
+  height: 2rem;
+}
+.lowerSide {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Adds uniform spacing between each item */
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* Adds space between icon and text */
+  font-size: 1.6rem; /* Adjusts the font size for better readability */
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.listItem img {
+  height: 2.5rem; /* Ensures all icons have the same height */
+  width: 2.5rem; /* Ensures all icons have the same width */
+}
+
+.listItem:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Adds a subtle hover effect */
+  color: #5A4BFF; /* Changes text color on hover */
+}
+
+
+.main {
+  flex: 9;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #1a1a2e;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.chats {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.chats img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.txt {
+  background-color: #2e2e4e;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  max-width: 60%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Different background color for bot messages */
+.chats.bot .txt {
+  background-color: #3b3b63;
+}
+
+/* Chat Footer */
+.chatFooter {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 2rem;
+  background-color: #1a1a2e;
+  display: flex;
+  align-items: center;
+}
+
+.inp {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.inp input {
+  flex: 1;
+  padding: 1.2rem 1.5rem;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 2rem;
+  outline: none;
+  background-color: #2e2e4e;
+  color: white;
+  transition: background 0.3s;
+}
+
+.inp input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Send Button */
+.send {
+  background-color: #5A4BFF;
+  border: none;
+  padding: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.send:hover {
+  background-color: #7b68ee;
+}
+
+.chat.user, .chat.bot {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.chat.user img, .chat.bot img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.chat.user {
+  justify-content: flex-end;
+}
+
+.chat.bot {
+  justify-content: flex-start;
+}
+/* Scrollbar customization for the chat area */
+.main::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.main::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
